@@ -9,7 +9,6 @@ import { useState } from "react";
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false)
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,7 +65,7 @@ const Contact = () => {
             ></input>
             <input type="text" placeholder="Email" name="user_email" required></input>
             <textarea rows="5" placeholder="Message" name="message" required></textarea>
-            <button>Submit</button>
+            <button >Submit</button>
             {done && "Thank you!"}
           </form>
         </div>

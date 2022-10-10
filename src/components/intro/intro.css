@@ -70,15 +70,15 @@
 }
 
 .i-img{
+    clip-path: polygon(100% 0%, 100% 49%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
     height: 100%;
+    width: 80%;
     right: 0px;
     bottom: 0px;
     position: absolute;
 }
 
 .i-bg{
-    clip-path: polygon(100% 0%, 100% 49%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-    background-color:forestgreen;
     width:85%;
     height: 100%;
     position: absolute;
