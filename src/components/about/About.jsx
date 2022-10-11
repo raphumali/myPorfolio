@@ -23,8 +23,9 @@ const About = () => {
         </p>
         <p>
           Some hobbies (other than coding) include working out, playing video
-          games and watching movies. Scroll down to get in touch with me!
+          games and watching movies. 
         </p>
+        <p>Scroll down to get in touch with me!</p>
       </div>
     </div>
   );
