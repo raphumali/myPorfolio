@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <div className="a-right">
         <h1 className="a-sub">About Me</h1>
-        <p className="a-sub">Something Something Something</p>
+        <p className="a-sub">That's me on the left!</p>
         <p className="a-desc">
           I'm 22 years old living in Calgary, Alberta, and I have a passion for
           coding and technology. In 2020 I decided to school to learn about the
