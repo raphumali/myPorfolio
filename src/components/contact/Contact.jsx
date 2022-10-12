@@ -2,13 +2,16 @@ import "./Contact.css";
 import Phone from "../../img/phone.png";
 import Email from "../../img/gmail.png";
 import Address from "../../img/address.png";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { ThemeContext } from "../../context";
 
 const Contact = () => {
   const formRef = useRef();
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(false);
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,15 +25,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setDone(true)
+          setDone(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-
-
 
   return (
     <div className="c">
@@ -56,16 +57,31 @@ const Contact = () => {
             IT or developer positions within Calgary, or remote work positions.
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" name="user_name" required></input>
-            <input
+            <input style={{backgroundColor : darkMode && "#333"}}
+              type="text"
+              placeholder="Name"
+              name="user_name"
+              required
+            ></input>
+            <input style={{backgroundColor : darkMode && "#333"}}
               type="text"
               placeholder="Subject"
               name="user_subject"
               required
             ></input>
-            <input type="text" placeholder="Email" name="user_email" required></input>
-            <textarea rows="5" placeholder="Message" name="message" required></textarea>
-            <button >Submit</button>
+            <input style={{backgroundColor : darkMode && "#333"}}
+              type="text"
+              placeholder="Email"
+              name="user_email"
+              required
+            ></input>
+            <textarea style={{backgroundColor : darkMode && "#333"}}
+              rows="5"
+              placeholder="Message"
+              name="message"
+              required
+            ></textarea>
+            <button>Submit</button>
             {done && "Thank you!"}
           </form>
         </div>

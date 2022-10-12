@@ -12,9 +12,9 @@
 
 .p-browser{
     height: 22px;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(170, 170, 170);
     display: flex;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
     align-items: center;
 }
 
