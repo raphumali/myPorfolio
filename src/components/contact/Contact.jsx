@@ -10,8 +10,10 @@ import { ThemeContext } from "../../context";
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +28,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           setDone(true);
+          setIsDisabled(true);
         },
         (error) => {
           console.log(error.text);
@@ -70,7 +73,7 @@ const Contact = () => {
               required
             ></input>
             <input style={{backgroundColor : darkMode && "#333"}}
-              type="text"
+              type="email"
               placeholder="Email"
               name="user_email"
               required
@@ -81,8 +84,8 @@ const Contact = () => {
               name="message"
               required
             ></textarea>
-            <button>Submit</button>
-            {done && "Thank you!"}
+            <button disabled={isDisabled}>Submit</button>
+            {done && "   Thank you! I will be in touch."}
           </form>
         </div>
       </div>
