@@ -15,7 +15,7 @@ const Intro = () => {
                     <div className="i-title">
                         <div className="i-title-wrapper">
                             <div className="i-title-item">
-                                Information Technology Graduate
+                                Information Technology Major
                             </div>
                             <div className="i-title-item">
                                 Web Developer
